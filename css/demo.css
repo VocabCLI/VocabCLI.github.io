@@ -7,10 +7,6 @@
     width: 80vw;
 }
 
-.topbar {
-    background: #000;
-}
-
 body {
     animation: 1.5s ease-out 0s 1 FadeIn;
 }
@@ -22,6 +18,10 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+.topbar {
+    background: #000;
 }
 
 .topbar::after {
@@ -66,25 +66,22 @@ html {
     font-weight: 400;
 }
 
-.about-info {
+.download-info {
     text-align: center;
     font-size: 1vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 17vw;
 }
 
-.about-info a {
+.download-info a {
     text-align: center;
     text-decoration: none;
     color: blue;
 }
 
-.about-info a,
-.about-info a:visited,
-.about-info a:hover,
-.about-info a:active {
+.download-info a,
+.download-info a:visited,
+.download-info a:hover,
+.download-info a:active {
     color: inherit;
     color: #0000ff;
 }
@@ -93,11 +90,7 @@ html {
     opacity: 5%;
     text-align: center;
     font-size: 0.8vw;
-    margin-top: 25vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 22vw;
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -159,6 +152,6 @@ html {
         opacity: 5%;
         text-align: center;
         font-size: 10px;
-        margin-top: 850px;
+        margin-top: 280px;
     }
 }
