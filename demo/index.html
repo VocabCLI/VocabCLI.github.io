@@ -1,14 +1,17 @@
 <html>
+<!-- 
+TODO:
+add css styling to the html file
+make the webpage mobile first, responsive -->
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mov-cli</title>
+    <title>vocabCLI</title>
     <link rel="stylesheet" href="../css/demo.css">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-    <meta property="og:title" content="mov-cli" />
+    <meta property="og:title" content="vocabCLI" />
     <meta property="og:description" content="A Command Line Tool to watch Movies and Shows" />
-    <meta property="og:image" content="https://mov-cli.github.io/images/mov-cli.png" />
 </head>
 
 <body>
@@ -27,21 +30,474 @@
         </div>
     </div>
     <div class="container">
-        <div class="download">
-            <div class="download-info">
-                <h1>Download</h1>
-                <p>Instructions on how to download you find here: </p>
-                <br>
-                <a href="https://github.com/mov-cli/mov-cli#installation">Download</a>
-                <br>
-                <br>
-                <div class="disclaimer">
-                    <h3>Disclaimer</h3>
-                    <p>By Using this Tool you accept the Disclaimer</p>
-                    <a href="/disclaimer">Disclaimer</a>
-                </div>
-            </div>
+        <div class="manual">
+            <h1 id="-vocabularycli-"><code>VocabularyCLI</code></h1>
+            <p>📂 This is a dictionary and a vocabulary builder CLI.</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console">$ <span class="hljs-symbol">VocabularyCLI</span> [<span class="hljs-symbol">OPTIONS</span>] <span class="hljs-symbol">COMMAND</span> [<span class="hljs-symbol">ARGS</span>]...
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--install-completion</code>: Install completion for the current shell.</li>
+                <li><code>--show-completion</code>: Show completion for the current shell, to copy it or customize the installation.
+                </li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <p><strong>Commands</strong>:</p>
+            <ul>
+                <li><code>Search or Delete Delete Quotes</code></li>
+                <li><code>View or Delete RSS feeds</code></li>
+                <li><code>about</code>: 💻 About the software</li>
+                <li><code>antonym</code>: ❌ Find antonyms for a...</li>
+                <li><code>bye</code>: 👋🏼 Exits the CLI</li>
+                <li><code>clean</code>: Filter out explicit words in a text or a...</li>
+                <li><code>clear</code>: 🧹 Clears all lists</li>
+                <li><code>define</code>: 📚 Lookup a word in the...</li>
+                <li><code>delete</code>: 🚮 Deletes the word from the database</li>
+                <li><code>export</code>: 📂 Exports a list of...</li>
+                <li><code>favorite</code>: 💙 Sets a word as...</li>
+                <li><code>flashcard</code>: 📇 Create flashcards for words in your...</li>
+                <li><code>graph</code>: 📚 Generate Graphical Charts based on your...</li>
+                <li><code>hardwords</code>: 📝 Extract Difficult Words from a text or a...</li>
+                <li><code>history</code>: 🔁 Get a lookup history of a word</li>
+                <li><code>import</code>: 🔼 Imports a list words...</li>
+                <li><code>learn</code>: ✍🏼 Sets a word as...</li>
+                <li><code>list</code>: 📝 Lists of all your...</li>
+                <li><code>master</code>: 🧠 Sets a word as...</li>
+                <li><code>quiz</code>: ❓ Take a quiz on words in your learning list</li>
+                <li><code>random</code>: 🔀 Gets a random word</li>
+                <li><code>rate</code>: 📊 Learning Rate gives...</li>
+                <li><code>readability</code>: 📝 Get readability score of a text or a...</li>
+                <li><code>refresh</code>: 🔄 Update the JSON response in the cache</li>
+                <li><code>revise</code>: 💡 Revise words from your learning list</li>
+                <li><code>sentiment</code>: 📝 Get the Sentiment Analysis of a text or a...</li>
+                <li><code>summary</code>: 📝 Generate a summary of a text or a webpage.</li>
+                <li><code>synonym</code>: 🔎 Find synonyms for a...</li>
+                <li><code>tag</code>: 🔖 Tags a word</li>
+                <li><code>unfavorite</code>: 💔 Removes the word from...</li>
+                <li><code>unlearn</code>: 😪 Removes the word from...</li>
+                <li><code>unmaster</code>: 🤔 Removes the word from...</li>
+                <li><code>untag</code>: ✂ Removes tag of a word...</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-search-or-delete-delete-quotes-">
+                <code>VocabularyCLI Search or Delete Delete Quotes</code>
+            </h2>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI Search <span class="hljs-keyword">or</span> Delete Delete Quotes [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-s, --show</code>: Show a random quote from the saved list. [default: False]</li>
+                <li><code>-l, --list</code>: Display all saved quotes. [default: False]</li>
+                <li><code>-d, --delete</code>: Delete a quote from the saved list. [default: False]</li>
+                <li><code>-a, --add</code>: Add a new quote. [default: False]</li>
+                <li><code>-S, --search TEXT</code>: Search for a quote.</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-view-or-delete-rss-feeds-">
+                <code>VocabularyCLI View or Delete RSS feeds</code></h2>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI View <span class="hljs-keyword">or</span> Delete RSS feeds [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-a, --add TEXT</code>: Add a new RSS feed.</li>
+                <li><code>-v, --view</code>: View all RSS feeds. [default: False]</li>
+                <li><code>-d, --delete</code>: Delete an RSS feed. [default: False]</li>
+                <li><code>-r, --read TEXT</code>: Read an RSS feed.</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-about-"><code>VocabularyCLI about</code></h2>
+            <p>💻 About the software</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI about [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-antonym-"><code>VocabularyCLI antonym</code></h2>
+            <p>❌ Find antonyms for a word</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI antonym [<span class="hljs-keyword">OPTIONS</span>] WORDS...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>WORDS...</code>: Word to search antonyms for [required]</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-bye-"><code>VocabularyCLI bye</code></h2>
+            <p>👋🏼 Exits the CLI</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI bye [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-clean-"><code>VocabularyCLI clean</code></h2>
+            <p>Filter out explicit words in a text or a webpage. Make it SFW!</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI clean [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-s, --strict</code>: Completely replace all bad words with asterisks. [default: False]</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-clear-"><code>VocabularyCLI clear</code></h2>
+            <p>🧹 Clears all lists</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI clear [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-l, --learning</code>: Clear all words in your learning list [default: False]</li>
+                <li><code>-m, --mastered</code>: Clear all words in your mastered list [default: False]</li>
+                <li><code>-f, --favorite</code>: Clear all words in your favorite list [default: False]</li>
+                <li><code>-t, --tag TEXT</code>: Clear all words with a particular tag</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-define-"><code>VocabularyCLI define</code></h2>
+            <p>📚 Lookup a word in the dictionary</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console">$ VocabularyCLI <span class="hljs-keyword">define</span> [<span class="hljs-section">OPTIONS</span>] WORDS...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>WORDS...</code>: Word to search [required]</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-s, --short</code>: Lightweight definitions. [default: False]</li>
+                <li><code>-p, --pronounce</code>: Pronounce the word. [default: False]</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-delete-"><code>VocabularyCLI delete</code></h2>
+            <p>🚮 Deletes the word from the database</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console">$ <span class="hljs-symbol">VocabularyCLI</span> delete [<span class="hljs-symbol">OPTIONS</span>] [<span class="hljs-symbol">WORDS</span>]...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>[WORDS]...</code>: Word to be deleted</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-m, --mastered</code>: Deletes all mastered words [default: False]</li>
+                <li><code>-l, --learning</code>: Deletes all learning words [default: False]</li>
+                <li><code>-f, --favorite</code>: Deletes all favorite words [default: False]</li>
+                <li><code>-t, --tag TEXT</code>: Tag of words to be deleted</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-export-"><code>VocabularyCLI export</code></h2>
+            <p>📂 Exports a list of all your looked up words</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI export [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-P, --pdf</code>: Export a list of your looked up words in PDF format. [default: False]</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-favorite-"><code>VocabularyCLI favorite</code></h2>
+            <p>💙 Sets a word as favorite</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI favorite [<span class="hljs-keyword">OPTIONS</span>] WORDS...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>WORDS...</code>: Word to add to favorites. [required]</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-flashcard-"><code>VocabularyCLI flashcard</code></h2>
+            <p>📇 Create flashcards for words in your learning list</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI flashcard [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-graph-"><code>VocabularyCLI graph</code></h2>
+            <p>📚 Generate Graphical Charts based on your vocabulary</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI graph [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-twb, --topwordsbar INTEGER RANGE</code>: Bar Graph of Top N Most Looked Up Words</li>
+                <li><code>-ttb, --toptagsbar INTEGER RANGE</code>: Bar Graph of Top N Tags with the most words.</li>
+                <li><code>-twp, --topwordspie</code>: Pie Chart of Top 10 Most Looked Up Words [default: False]</li>
+                <li><code>-ttp, --toptagspie</code>: Pie Chart of Top 10 Tags with the most words. [default: False]</li>
+                <li><code>-lw, --lookupweek</code>: Bar Graph of the word count distribution for days in the past week. [default: False]</li>
+                <li><code>-lm, --lookupmonth</code>: Bar Graph of the word count distribution for days in the past month. [default: False]</li>
+                <li><code>-ly, --lookupyear</code>: Bar Graph of the word count distribution for days in the past year. [default: False]</li>
+                <li><code>-lvm, --learnvsmaster</code>: Stacked Graph the number of words in your learning list vs. your mastered list. [default: False]</li>
+                <li><code>-wc, --wordcategories</code>: Bar Graph of the number of words in a category domain. [default: False]
+                </li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-hardwords-"><code>VocabularyCLI hardwords</code></h2>
+            <p>📝 Extract Difficult Words from a text or a webpage.</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI hardwords [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-history-"><code>VocabularyCLI history</code></h2>
+            <p>🔁 Get a lookup history of a word</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI history [<span class="hljs-keyword">OPTIONS</span>] WORDS...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>WORDS...</code>: Word to get lookup history for [required]</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-import-"><code>VocabularyCLI import</code></h2>
+            <p>🔼 Imports a list words in the application</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console">$ <span class="hljs-type">VocabularyCLI</span> <span class="hljs-keyword">import</span> [OPTIONS]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-learn-"><code>VocabularyCLI learn</code></h2>
+            <p>✍🏼 Sets a word as learning</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI learn [<span class="hljs-keyword">OPTIONS</span>] WORDS...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>WORDS...</code>: Word to add to learning. [required]</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-list-"><code>VocabularyCLI list</code></h2>
+            <p>📝 Lists of all your looked up words</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI list [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-f, --favorite</code>: Get a list of your favorite words. [default: False]</li>
+                <li><code>-l, --learning</code>: Get a list of words in your learning list. [default: False]</li>
+                <li><code>-m, --mastered</code>: Get a list of words in your mastered list.</li>
+                <li><code>-t, --tag TEXT</code>: Get a list of words with a particular tag.</li>
+                <li><code>-d, --days INTEGER</code>: Get a list of words from last n number of days.</li>
+                <li><code>-D, --date</code>: Get a list of words from a particular date. [default: False]</li>
+                <li><code>-L, --last INTEGER</code>: Get a list of last searched words.</li>
+                <li><code>-M, --most INTEGER</code>: Get a list of most searched words.</li>
+                <li><code>-T, --tagnames</code>: Get a list of all the tags. [default: False]</li>
+                <li><code>-c, --collection TEXT</code>: Get a list of words from a collection.</li>
+                <li><code>-C, --collections</code>: Get a list of all the collections. [default: False]</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-master-"><code>VocabularyCLI master</code></h2>
+            <p>🧠 Sets a word as mastered</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console">$ VocabularyCLI <span class="hljs-keyword">master</span> <span class="hljs-title">[OPTIONS</span>] WORDS...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>WORDS...</code>: Word to add to mastered. [required]</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-quiz-"><code>VocabularyCLI quiz</code></h2>
+            <p>❓ Take a quiz on words in your learning list</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI quiz [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-n, --number INTEGER RANGE</code>: Limit the number of words to quiz on.</li>
+                <li><code>-t, --tag TEXT</code>: Tag of words to quiz on.</li>
+                <li><code>-l, --learning</code>: Take a quiz on words in your learning list [default: False]</li>
+                <li><code>-m, --mastered</code>: Take a quiz on words in your mastered list [default: False]</li>
+                <li><code>-f, --favorite</code>: Take a quiz on words in your favorite list [default: False]</li>
+                <li><code>-c, --collection TEXT</code>: Take a quiz on words in a particular collection</li>
+                <li><code>-h, --history</code>: Show quiz history and stats [default: False]</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-random-"><code>VocabularyCLI random</code></h2>
+            <p>🔀 Gets a random word</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI random [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-l, --learning</code>: Get a random learning word [default: False]</li>
+                <li><code>-m, --mastered</code>: Get a random mastered word [default: False]</li>
+                <li><code>-f, --favorite</code>: Get a random favorite word [default: False]</li>
+                <li><code>-t, --tag TEXT</code>: Get a random word from a particular tag</li>
+                <li><code>-c, --collection TEXT</code>: Get a random word from a particular collection</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-rate-"><code>VocabularyCLI rate</code></h2>
+            <p>📊 Learning Rate gives the number of words you have learned in a particular time period with a comparison of a previous time period</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI rate [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-t, --today</code>: Get learning rate today [default: False]</li>
+                <li><code>-w, --week</code>: Get learning rate this week [default: False]</li>
+                <li><code>-m, --month</code>: Get learning rate this month [default: False]</li>
+                <li><code>-y, --year</code>: Get learning rate this year [default: False]</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-readability-"><code>VocabularyCLI readability</code></h2>
+            <p>📝 Get readability score of a text or a webpage.</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI readability [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-refresh-"><code>VocabularyCLI refresh</code></h2>
+            <p>🔄 Update the JSON response in the cache</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI refresh [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-revise-"><code>VocabularyCLI revise</code></h2>
+            <p>💡 Revise words from your learning list</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI revise [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-n, --number INTEGER</code>: Number of words to revise in random order.</li>
+                <li><code>-t, --tag TEXT</code>: Revise words in a particular tag.</li>
+                <li><code>-l, --learning</code>: Revise words in your learning list [default: False]</li>
+                <li><code>-m, --mastered</code>: Revise words in your mastered list [default: False]</li>
+                <li><code>-f, --favorite</code>: Revise words in your favorite list [default: False]</li>
+                <li><code>-c, --collection TEXT</code>: Revise words in a particular collection</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-sentiment-"><code>VocabularyCLI sentiment</code></h2>
+            <p>📝 Get the Sentiment Analysis of a text or a webpage.</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI sentiment [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-summary-"><code>VocabularyCLI summary</code></h2>
+            <p>📝 Generate a summary of a text or a webpage.</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI summary [<span class="hljs-keyword">OPTIONS</span>]
+            </code></pre>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-f, --file</code>: Save the summary to a text file. [default: False]</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-synonym-"><code>VocabularyCLI synonym</code></h2>
+            <p>🔎 Find synonyms for a word</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI synonym [<span class="hljs-keyword">OPTIONS</span>] WORDS...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>WORDS...</code>: Word to search synonyms for [required]</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-tag-"><code>VocabularyCLI tag</code></h2>
+            <p>🔖 Tags a word</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console">$ VocabularyCLI <span class="hljs-keyword">tag</span> <span class="hljs-title">[OPTIONS</span>] WORDS...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>WORDS...</code>: Words to tagged [required]</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>-n, --name TEXT</code>: Tag to add to the words [required]</li>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-unfavorite-"><code>VocabularyCLI unfavorite</code></h2>
+            <p>💔 Removes the word from favorites</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI unfavorite [<span class="hljs-keyword">OPTIONS</span>] WORDS...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>WORDS...</code>: Word to remove from favorites [required]</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-unlearn-"><code>VocabularyCLI unlearn</code></h2>
+            <p>😪 Removes the word from learning</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI unlearn [<span class="hljs-keyword">OPTIONS</span>] WORDS...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>WORDS...</code>: Word to remove from learning [required]</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-unmaster-"><code>VocabularyCLI unmaster</code></h2>
+            <p>🤔 Removes the word from mastered</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI unmaster [<span class="hljs-keyword">OPTIONS</span>] WORDS...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>WORDS...</code>: Word to remove from mastered [required]</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+            <h2 class="manual-subheading" id="-vocabularycli-untag-"><code>VocabularyCLI untag</code></h2>
+            <p>✂ Removes tag of a word in the dictionary</p>
+            <p><strong>Usage</strong>:</p>
+            <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI untag [<span class="hljs-keyword">OPTIONS</span>] WORDS...
+            </code></pre>
+            <p><strong>Arguments</strong>:</p>
+            <ul>
+                <li><code>WORDS...</code>: Word to remove tag from [required]</li>
+            </ul>
+            <p><strong>Options</strong>:</p>
+            <ul>
+                <li><code>--help</code>: Show this message and exit.</li>
+            </ul>
+
         </div>
+    </div>
     </div>
 </body>
 

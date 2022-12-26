@@ -20,6 +20,24 @@ body {
     }
 }
 
+.manual {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 0 0 0 0;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: white;
+    text-align: left;
+    margin-bottom: 10rem;
+}
+
+.manual-subheading {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    color: blue;
+}
+
 .topbar {
     background: #000;
 }
@@ -64,26 +82,6 @@ html {
     scroll-behavior: smooth;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
-}
-
-.download-info {
-    text-align: center;
-    font-size: 1vw;
-    margin-top: 17vw;
-}
-
-.download-info a {
-    text-align: center;
-    text-decoration: none;
-    color: blue;
-}
-
-.download-info a,
-.download-info a:visited,
-.download-info a:hover,
-.download-info a:active {
-    color: inherit;
-    color: #0000ff;
 }
 
 .footer {
