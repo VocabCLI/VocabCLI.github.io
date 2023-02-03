@@ -3,18 +3,6 @@
   margin: 0 auto;
 }
 
-.topbar-container {
-  width: 80vw;
-}
-
-.topbar {
-  background: #000;
-}
-
-body {
-  animation: 1.5s ease-out 0s 1 FadeIn;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -31,14 +19,18 @@ body {
   background: #555;
 }
 
-@keyframes FadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+
+body {
+
+  background-image: url("../assets/snaps/backdrop.jpeg");
+  object-fit: fill;
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
 }
+
 
 .topbar::after {
   content: "";
@@ -46,11 +38,25 @@ body {
   clear: both;
 }
 
+
+.topbar-container {
+  width: 80vw;
+  height: 70px;
+  align-items: center;
+  display: flex;
+
+}
+
+.topbar {
+  background: #000;
+}
+
+
+
 .logo {
   position: relative;
   width: 12vw;
   height: 12vw;
-  margin: -4vw 0 0 0;
 }
 
 nav {
@@ -74,47 +80,64 @@ nav a {
   text-decoration: none;
 }
 
-html {
-  background-color: black;
-  color: white;
-  scroll-behavior: smooth;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
+/* NABAR END */
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  width: 80vw;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
 }
 
 .home-info {
-  float: center;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 1vw;
+  margin-bottom: 20px;
 }
 
 .title {
-  font-size: 2vw;
-  width: 10vw;
-  padding: 0.5vw;
-  margin-bottom: 2vw;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px #000000;
 }
 
 .subtitle {
-  font-size: 1vw;
-  margin: 0 15vw;
-  color: gold;
-  opacity: 0.7;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px #000000;
 }
 
 .showcase {
-  height: 25vw;
-  margin-top: 7vw;
-  margin-left: 27vw;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 5px 5px 10px #000000;
+  border-radius: 10px;
 }
 
-.footer {
-  opacity: 5%;
+button {
+  background: linear-gradient(to right, #00b4db, #0083b0);
+  border-radius: 25px;
+  border: none;
+  color: #ffffff;
+  padding: 15px 32px;
   text-align: center;
-  font-size: 0.7vw;
-  margin-top: 17vw;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 2px 2px 5px #000000;
 }
+
+
+/* FEATURE SECTION */
 
 @media only screen and (max-device-width: 480px) {
   html,

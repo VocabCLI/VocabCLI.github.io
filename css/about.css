@@ -1,70 +1,82 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 * {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .topbar-container {
-    width: 80vw;
+  width: 80vw;
+  height: 70px;
+  align-items: center;
+  display: flex;
+
 }
 
 .topbar {
-    background: #000;
+  background: #000;
 }
 
 body {
-    animation: 1.5s ease-out 0s 1 FadeIn;
+    background-image: url("../assets/snaps/backdrop.jpeg");
+    background-color: black;
+    color: white;
+    scroll-behavior: smooth;   
+    object-fit: cover;
 }
 
-@keyframes FadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+::-webkit-scrollbar {
+  width: 8px;
 }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 .topbar::after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .logo {
-    position: relative;
-    width: 12vw;
-    height: 12vw;
-    margin: -4vw 0 0 0;
+  position: relative;
+  width: 12vw;
+  height: 12vw;
 }
 
 nav {
-    float: right;
+  float: right;
 }
 
 nav li {
-    display: inline-block;
-    margin-left: 3vw;
-    padding-top: 0.4vw;
-    position: relative;
-    text-align: center;
-    font-size: 1vw;
-    line-height: 3vw;
-    opacity: 0.7;
-    text-decoration: underline dotted white;
+  display: inline-block;
+  margin-left: 3vw;
+  padding-top: 0.4vw;
+  position: relative;
+  text-align: center;
+  font-size: 1vw;
+  line-height: 3vw;
+  opacity: 0.7;
+  text-decoration: underline dotted white;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
-html {
-    background-color: black;
-    color: white;
-    scroll-behavior: smooth;
-    font-family: "PT Sans", sans-serif;
-    font-weight: 400;
-}
+/* NABAR END */
+
+
+
 
 .about-info {
     text-align: center;

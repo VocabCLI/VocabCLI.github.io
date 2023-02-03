@@ -1,56 +1,107 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VocabCLI</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
-    <meta property="og:title" content="VocabCLI" />
-    <meta
-      property="og:description"
-      content="A Command Line Tool to watch Movies and Shows"
-    />
-    <meta
-      property="og:image"
-      content="https://VocabCLI.github.io/images/VocabCLI.png"
-    />
-  </head>
-
-  <body>
-    <div class="topbar">
-      <div class="topbar-container">
-        <a href="https://VocabCLI.github.io">
-          <img
-            class="logo"
-            src="assets/logos//VocabCLI -  White.png"
-            alt="logo"
-          />
-        </a>
-        <nav>
-          <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/demo">Demo</a></li>
-            <li><a href="https://github.com/VocabCLI/VocabCLI">GitHub</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VocabCLI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="VocabCLI" />
+  <meta property="og:description" content="A Command Line Tool to watch Movies and Shows" />
+  <meta property="og:image" content="https://VocabCLI.github.io/images/VocabCLI.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-fixed w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10">
+  <div class="topbar">
+    <div class="topbar-container">
+      <a href="https://VocabCLI.github.io">
+        <img class="logo" src="assets/logos//VocabCLI -  White.png" alt="logo" />
+      </a>
+      <!-- RIGHT SIDE OF NAVBAR -->
+      <nav>
+        <ul>
+          <li><a href="/demo">Demo</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="https://github.com/VocabCLI/VocabCLI">GitHub</a></li>
+        </ul>
+      </nav>
+      <!-- NAVBAR END -->
+    </div>
+  </div>
+  <div class="container mx-auto px-6 bg-fixed">
+    <!-- TOP SECTION -->
+    <div class="mt-8 mb-12">
+      <div class="w-full md:w-3/4 pr-6">
+        <h1 class="text-3xl font-bold text-center mb-2">VocabCLI</h1>
+        <p class="text-lg leading-normal mb-12 text-center"> A lightweight Command Line Interface that allows users to look up word definitions, examples, synonyms and antonyms directly via the command line. Powered with several utility based commands our CLI offers rapid and robust Knowledge Base capabilities like Flashcards, Tagging, Word Management, Graph Reporting, Bulk import and export of word lists and is a definitive software for linguaphiles. </p>
+      </div>
+      <div class="w-full md:w-1/2">
+        <img class="w-full h-full" src="assets/snaps/web-banner.png" alt="VocabCLI Showcase">
       </div>
     </div>
-    <div class="container">
-      <div class="home">
-        <div class="home-info">
-          <h1 class="title">VocabCLI</h1>
-          <p class="subtitle">
-            A lightweight Command Line Interface that allows users to look up
-            word definitions, examples, synonyms and antonyms directly via the
-            command line. <br />Powered with several utility based commands our
-            CLI offers rapid and robust Knowledge Base capabilities like
-            Flashcards, Tagging, Word Management, Graph Reporting, Bulk import
-            and export of word lists and is a definitive software for
-            linguaphiles.
-          </p>
+    <!-- TOP SECTION END -->
+    <hr class="my-12 border-t-4 border-indigo-500 w-3/4 rounded-lg" />
+    <!-- FEATURES SECTION -->
+    <div class="mt-10">
+      <!-- SECTION 1: WORD MANAGEMENT -->
+      <div class="flex justify-items-end w-10/12 mt-10">
+        <div class="w-full md:w-1/2 pr-6">
+          <img class="w-full h-full rounded-lg shadow-lg" src="assets/snaps/web-banner.png" alt="Feature Image">
         </div>
-        <img class="showcase" src="assets/snaps/snap4.png" />
+        <div class="w-full md:w-1/2 pl-6">
+          <h2 class="text-4xl font-bold leading-tight p-4 bg-gray-900 bg-opacity-75 rounded-lg">Word Management</h2>
+          <p class="text-lg leading-normal mt-4 text-gray-200"> The Word Management Module is a comprehensive solution for users who want to expand their vocabulary and manage their words effectively. With this module, users can perform various tasks related to words, such as looking up definitions, examples, synonyms, and antonyms. They can add words to their word list, delete words, and edit words as per their requirements. Additionally, they can search for words within their word list, view all words in the list, and add custom tags to words for better organization. The module also allows users to set words as learning, mastered, or favorite and provides options to clear or delete the entire word list. This feature-rich Word Management Module is an excellent tool for anyone who wants to enhance their language skills and keep their vocabulary organized.</p>
+        </div>
       </div>
+      <!-- SECTION 1 END -->
+      <!-- SECTION 2: NLP and Text Analysis-->
+      <div class="flex justify-items-end w-10/12 mt-32">
+        <div class="w-full md:w-1/2 pr-6">
+          <h2 class="text-4xl font-bold leading-tight p-4 bg-gray-900 bg-opacity-75 rounded-lg">NLP and Text Analysis</h2>
+          <p class="text-lg leading-normal mt-4 text-gray-200"> The Text Processing and NLP Module is an innovative solution for individuals who want to analyze and process text data effectively. With its various features, users can filter out explicit words in a text or webpage and make it safe for work. The module also helps users identify difficult words within a text or webpage, making it easy for them to understand complex content. Additionally, it provides a readability score for text or webpages, allowing users to gauge the level of difficulty of a piece of content. The sentiment analysis feature helps users understand the overall tone and emotion conveyed by a text or webpage. Finally, the module can generate a summarized version of a text or webpage, making it easy for users to quickly grasp the key points. This Text Processing and NLP Module is an indispensable tool for anyone who wants to process and analyze text data with ease and efficiency. </p>
+        </div>
+        <div class="w-full md:w-1/2 pl-6">
+          <img class="w-full h-full rounded-lg shadow-lg" src="assets/snaps/web-banner.png" alt="Feature Image">
+        </div>
+      </div>
+      <!-- SECTION 2 END -->
+      <!-- SECTION 3: VOCABULARY BUILDER -->
+      <div class="flex justify-items-end w-10/12 mt-32">
+        <div class="w-full md:w-1/2 pr-6">
+          <img class="w-full h-full rounded-lg shadow-lg" src="assets/snaps/web-banner.png" alt="Feature Image">
+        </div>
+        <div class="w-full md:w-1/2 pl-6">
+          <h2 class="text-4xl font-bold leading-tight p-4 bg-gray-900 bg-opacity-75 rounded-lg">Vocabulary Builder</h2>
+          <p class="text-lg leading-normal mt-4 text-gray-200"> The Vocabulary Builder module is a powerful tool for anyone looking to expand their vocabulary and improve their language skills. With a range of features designed to make word learning and management easy, this module is the perfect companion for language learners of all levels. The module allows users to look up words in the dictionary, find synonyms and antonyms, generate flashcards for words in their learning list, get a history of their word lookups, take quizzes on word definitions, get a random word, track their progress by comparing the words they've learned over time, revise words from their learning list, and perform spellchecks on their input sentences. Whether you're a student, a professional, or simply someone looking to improve their vocabulary, the Vocabulary Builder module has everything you need to achieve your language goals.</p>
+        </div>
+      </div>
+      <!-- SECTION 3 END -->
+
+       <!-- SECTION 4: Stats + Import/Export-->
+       <div class="flex justify-items-end w-10/12 mt-32">
+        <div class="w-full md:w-1/2 pr-6">
+          <h2 class="text-4xl font-bold leading-tight p-4 bg-gray-900 bg-opacity-75 rounded-lg">Stats & Import/Export</h2>
+          <p class="text-lg leading-normal mt-4 text-gray-200"> The Statistics and Backup Recovery Module is a powerful tool for users who want to track their progress and keep their data secure. With the Import & Export feature, users can easily transfer their data by exporting a list of all their looked-up words and importing words into the application. The Stats feature provides valuable insights into the user's vocabulary, including graphical charts that show their progress and milestones they have reached. Users can also predict the milestone of words they have looked up using the app and view their streak of days for which they have been using the app. This module is designed to provide users with an easy and convenient way to manage their data and track their progress. </p>
+        </div>
+        <div class="w-full md:w-1/2 pl-6">
+          <img class="w-full h-full rounded-lg shadow-lg" src="assets/snaps/web-banner.png" alt="Feature Image">
+        </div>
+      </div>
+      <!-- SECTION 4 END -->
+
+       <!-- SECTION 5: Quotes and RSS -->
+       <div class="flex justify-items-end w-10/12 mt-32">
+        <div class="w-full md:w-1/2 pr-6">
+          <img class="w-full h-full rounded-lg shadow-lg" src="assets/snaps/web-banner.png" alt="Feature Image">
+        </div>
+        <div class="w-full md:w-1/2 pl-6">
+          <h2 class="text-4xl font-bold leading-tight p-4 bg-gray-900 bg-opacity-75 rounded-lg">Quotes & RSS</h2>
+          <p class="text-lg leading-normal mt-4 text-gray-200"> The Quotes and RSS module is an integral part of our CLI, providing users with daily inspiration and updates. With this module, users can get a quote of the day to start their day on a positive note and a word of the day to expand their vocabulary. The module also provides a platform to add, view, search, or delete quotes as per the user's preference. Keeping the data up-to-date is easy with the refresh feature that updates the JSON response in the cache. The RSS feature allows users to add, view, or delete RSS feeds, providing them with the latest news and updates in their preferred niches. This Quotes and RSS module is an excellent tool for anyone who wants to stay motivated and informed.</p>
+        </div>
+      </div>
+      <!-- SECTION 5 END -->
+
     </div>
-  </body>
+    <!-- FEATURES SECTION END -->
+  </div>
+</body>
 </html>

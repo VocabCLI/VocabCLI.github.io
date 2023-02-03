@@ -1,8 +1,4 @@
 <html>
-<!-- 
-TODO:
-add css styling to the html file
-make the webpage mobile first, responsive -->
 
 <head>
     <meta charset="utf-8">
@@ -12,26 +8,33 @@ make the webpage mobile first, responsive -->
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <meta property="og:title" content="vocabCLI" />
     <meta property="og:description" content="A Command Line Tool to watch Movies and Shows" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body>
     <div class="topbar">
         <div class="topbar-container">
             <a href="https://VocabCLI.github.io">
                 <img class="logo" src="../assets/logos//VocabCLI -  White.png" alt="logo">
             </a>
+            <!-- RIGHT SIDE OF NAVBAR -->
             <nav>
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/demo">Demo</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="https://github.com/VocabCLI/VocabCLI">GitHub</a></li>
                 </ul>
             </nav>
+            <!--NAVBAR END-->
         </div>
     </div>
-    <div class="container">
+
+    <!-- WINDOW CONTAINER -->
+    <div class="py-20 bg-fixed bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 bg-black">
+     
+    <!-- MANUAL BEGINS -->
         <div class="manual">
-            <h1 id="-vocabularycli-"><code>VocabularyCLI</code></h1>
+
+            <h1 class="text-4xl " id="vocabularycli"><code>VocabularyCLI</code></h1>
             <p>📂 This is a dictionary and a vocabulary builder CLI.</p>
             <p><strong>Usage</strong>:</p>
             <pre><code class="lang-console">$ <span class="hljs-symbol">VocabularyCLI</span> [<span class="hljs-symbol">OPTIONS</span>] <span class="hljs-symbol">COMMAND</span> [<span class="hljs-symbol">ARGS</span>]...
@@ -39,8 +42,7 @@ make the webpage mobile first, responsive -->
             <p><strong>Options</strong>:</p>
             <ul>
                 <li><code>--install-completion</code>: Install completion for the current shell.</li>
-                <li><code>--show-completion</code>: Show completion for the current shell, to copy it or customize the installation.
-                </li>
+                <li><code>--show-completion</code>: Show completion for the current shell, to copy it or customize the installation. </li>
                 <li><code>--help</code>: Show this message and exit.</li>
             </ul>
             <p><strong>Commands</strong>:</p>
@@ -95,7 +97,8 @@ make the webpage mobile first, responsive -->
                 <li><code>--help</code>: Show this message and exit.</li>
             </ul>
             <h2 class="manual-subheading" id="-vocabularycli-view-or-delete-rss-feeds-">
-                <code>VocabularyCLI View or Delete RSS feeds</code></h2>
+                <code>VocabularyCLI View or Delete RSS feeds</code>
+            </h2>
             <p><strong>Usage</strong>:</p>
             <pre><code class="lang-console"><span class="hljs-symbol">$</span> VocabularyCLI View <span class="hljs-keyword">or</span> Delete RSS feeds [<span class="hljs-keyword">OPTIONS</span>]
             </code></pre>
@@ -240,8 +243,7 @@ make the webpage mobile first, responsive -->
                 <li><code>-lm, --lookupmonth</code>: Bar Graph of the word count distribution for days in the past month. [default: False]</li>
                 <li><code>-ly, --lookupyear</code>: Bar Graph of the word count distribution for days in the past year. [default: False]</li>
                 <li><code>-lvm, --learnvsmaster</code>: Stacked Graph the number of words in your learning list vs. your mastered list. [default: False]</li>
-                <li><code>-wc, --wordcategories</code>: Bar Graph of the number of words in a category domain. [default: False]
-                </li>
+                <li><code>-wc, --wordcategories</code>: Bar Graph of the number of words in a category domain. [default: False] </li>
                 <li><code>--help</code>: Show this message and exit.</li>
             </ul>
             <h2 class="manual-subheading" id="-vocabularycli-hardwords-"><code>VocabularyCLI hardwords</code></h2>
@@ -495,10 +497,10 @@ make the webpage mobile first, responsive -->
             <ul>
                 <li><code>--help</code>: Show this message and exit.</li>
             </ul>
-
         </div>
+    <!-- MANUAL ENDS -->
+    
     </div>
-    </div>
-</body>
 
+</body>
 </html>
