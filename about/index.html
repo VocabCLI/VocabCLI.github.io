@@ -11,25 +11,64 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-fixed bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 bg-black">
-    <div class="topbar">
-        <div class="topbar-container">
-            <a href="https://VocabCLI.github.io">
-                <img class="logo" src="../assets/logos//VocabCLI -  White.png" alt="logo" />
-            </a>
-            <!-- RIGHT SIDE OF NAVBAR -->
-            <nav>
-                <ul>
-                    <li><a href="/demo">Demo</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="https://github.com/VocabCLI/VocabCLI">GitHub</a></li>
-                </ul>
-            </nav>
-            <!--NAVBAR END-->
-        </div>
+     <!-- NAVBAR START -->
+  <div class="topbar">
+    <div class="topbar-container">
+      <a href="https://VocabCLI.github.io">
+        <img class="logo md:object-center md:object-cover sm:object-center sm:object-fill" src="../assets/logos//VocabCLI -  White.png" alt="logo" />
+      </a>
+      <!-- RIGHT SIDE OF NAVBAR -->
+      <nav class="hidden md:block">
+        <ul class="inline-flex">
+          <li class="mr-2 md:text-lg">
+            <a class="hover:text-indigo-600" href="/demo">Demo</a>
+          </li>
+          <li class="mr-2 md:text-lg">
+            <a class="hover:text-indigo-600" href="/about">About</a>
+          </li>
+          <li class="mr-2 md:text-lg">
+            <a class="hover:text-indigo-600" href="https://vocabcli.github.io/docs">Docs</a>
+          </li>
+          <li class="mr-2 md:text-lg">
+            <a class="hover:text-indigo-600" href="https://github.com/VocabCLI/VocabCLI">GitHub</a>
+          </li>
+        </ul>
+      </nav>
+      <button id="hamburger-menu-toggle" class="px-3 py-2 border border-gray-400 rounded md:hidden hover:bg-gray-100 focus:outline-none">
+        <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
     </div>
-    <div class="about mt-12 w-1/2">
-        <h1 class="text-4xl text-center mb-12">About</h1>
-        <p class="text-center border rounded-lg border-red-200 px-20 py-6"> VocabularyCLI is a powerful and intuitive Command Line Interface (CLI) designed to help users expand their vocabulary and improve their language skills. This lightweight application offers a simple and easy-to-use interface, and is packed with features that make learning new words fun and interactive. At the heart of VocabularyCLI is a robust knowledge base that includes dictionary and thesaurus lookups, word management, quote saving, import and export, rich markup, and graph reporting. Whether you're a language enthusiast or simply looking to improve your vocabulary, this app has everything you need to get started. VocabularyCLI also offers advanced text classification and processing capabilities via the use of natural language processing and machine learning algorithms. This means you can perform sentiment analysis, paraphrasing, plagiarism detection, and more, all from the command line. One of the standout features of VocabularyCLI is its eye-catching panels, tables, animated symbols, emojis, interactive menus, spinners, and colored fonts. All of these rich features are designed to make your learning experience more enjoyable and interactive. In addition to all of these great features, VocabularyCLI is also developed using cutting-edge technologies like Python, Typer, Rich, PyTest, and Seaborn. This means you can expect fast and reliable performance, no matter what you're using the app for. So, if you're looking to expand your vocabulary, improve your language skills, or just want a fun and interactive way to learn new words, look no further than VocabularyCLI. And, if you'd like to support the development of this amazing app, be sure to visit our Github sponsors page and consider making a donation. With the right support, this app will continue to grow and evolve, helping people all over the world learn and improve their language skills. </p>
+  </div>
+  <!-- END NAVBAR -->
+  <!-- MOBILE NAVBAR -->
+  <div class="mobile-navbar hidden pb-5 md:block">
+    <ul class="mx-auto bg-white sm:hidden py-4">
+      <li class="mb-3 text-center w-1/2 sm:p-2">
+        <a class="text-black font-bold text-md lg:hidden md:hidden hover:text-indigo-600 " href="/demo">Demo</a>
+      </li>
+      <li class="mb-3 text-center w-1/2 sm:p-2">
+        <a class="text-black font-bold text-md lg:hidden md:hidden hover:text-indigo-600 " href="/about">About</a>
+      </li>
+      <li class="mb-3 text-center w-1/2 sm:p-2">
+        <a class="text-black font-bold text-md lg:hidden md:hidden hover:text-indigo-600 " href="https://vocabcli.github.io/docs">Docs</a>
+      </li>
+      <li class="mb-3 text-center w-1/2 sm:p-2">
+        <a class="text-black font-bold text-md lg:hidden md:hidden hover:text-indigo-600 " href="https://github.com/VocabCLI/VocabCLI">GitHub</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="about mt-12 w-full sm:w-1/2">
+    <h1 class="text-4xl text-center mb-12">About</h1>
+    <p class="text-center border rounded-lg border-red-200 px-20 py-6 sm:px-10 sm:p-6"> VocabularyCLI is a powerful and intuitive Command Line Interface (CLI) designed to help users expand their vocabulary and improve their language skills. This lightweight application offers a simple and easy-to-use interface, and is packed with features that make learning new words fun and interactive. At the heart of VocabularyCLI is a robust knowledge base that includes dictionary and thesaurus lookups, word management, quote saving, import and export, rich markup, and graph reporting. Whether you're a language enthusiast or simply looking to improve your vocabulary, this app has everything you need to get started. VocabularyCLI also offers advanced text classification and processing capabilities via the use of natural language processing and machine learning algorithms. This means you can perform sentiment analysis, paraphrasing, plagiarism detection, and more, all from the command line. One of the standout features of VocabularyCLI is its eye-catching panels, tables, animated symbols, emojis, interactive menus, spinners, and colored fonts. All of these rich features are designed to make your learning experience more enjoyable and interactive. In addition to all of these great features, VocabularyCLI is also developed using cutting-edge technologies like Python, Typer, Rich, PyTest, and Seaborn. This means you can expect fast and reliable performance, no matter what you're using the app for. So, if you're looking to expand your vocabulary, improve your language skills, or just want a fun and interactive way to learn new words, look no further than VocabularyCLI. And, if you'd like to support the development of this amazing app, be sure to visit our Github sponsors page and consider making a donation. With the right support, this app will continue to grow and evolve, helping people all over the world learn and improve their language skills. </p>
     </div>
+
+    <script>
+        document.querySelector('#hamburger-menu-toggle').addEventListener('click', function() {
+          document.querySelector('.mobile-navbar').classList.toggle('hidden');
+        });
+      </script>
 </body>
 </html>

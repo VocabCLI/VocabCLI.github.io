@@ -11,22 +11,55 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="topbar">
-        <div class="topbar-container">
-            <a href="https://VocabCLI.github.io">
-                <img class="logo" src="../assets/logos//VocabCLI -  White.png" alt="logo">
-            </a>
-            <!-- RIGHT SIDE OF NAVBAR -->
-            <nav>
-                <ul>
-                    <li><a href="/demo">Demo</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="https://github.com/VocabCLI/VocabCLI">GitHub</a></li>
-                </ul>
-            </nav>
-            <!--NAVBAR END-->
-        </div>
+  <!-- NAVBAR START -->
+  <div class="topbar">
+    <div class="topbar-container">
+      <a href="https://VocabCLI.github.io">
+        <img class="logo md:object-center md:object-cover sm:object-center sm:object-fill" src="../assets/logos//VocabCLI -  White.png" alt="logo" />
+      </a>
+      <!-- RIGHT SIDE OF NAVBAR -->
+      <nav class="hidden md:block">
+        <ul class="inline-flex">
+          <li class="mr-2 md:text-lg">
+            <a class="hover:text-indigo-600" href="/demo">Demo</a>
+          </li>
+          <li class="mr-2 md:text-lg">
+            <a class="hover:text-indigo-600" href="/about">About</a>
+          </li>
+          <li class="mr-2 md:text-lg">
+            <a class="hover:text-indigo-600" href="https://vocabcli.github.io/docs">Docs</a>
+          </li>
+          <li class="mr-2 md:text-lg">
+            <a class="hover:text-indigo-600" href="https://github.com/VocabCLI/VocabCLI">GitHub</a>
+          </li>
+        </ul>
+      </nav>
+      <button id="hamburger-menu-toggle" class="px-3 py-2 border border-gray-400 rounded md:hidden hover:bg-gray-100 focus:outline-none">
+        <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
     </div>
+  </div>
+  <!-- END NAVBAR -->
+  <!-- MOBILE NAVBAR -->
+  <div class="mobile-navbar hidden pb-5 md:block">
+    <ul class="mx-auto bg-white sm:hidden py-4">
+      <li class="mb-3 text-center w-1/2 sm:p-2">
+        <a class="text-black font-bold text-md lg:hidden md:hidden hover:text-indigo-600 " href="/demo">Demo</a>
+      </li>
+      <li class="mb-3 text-center w-1/2 sm:p-2">
+        <a class="text-black font-bold text-md lg:hidden md:hidden hover:text-indigo-600 " href="/about">About</a>
+      </li>
+      <li class="mb-3 text-center w-1/2 sm:p-2">
+        <a class="text-black font-bold text-md lg:hidden md:hidden hover:text-indigo-600 " href="https://vocabcli.github.io/docs">Docs</a>
+      </li>
+      <li class="mb-3 text-center w-1/2 sm:p-2">
+        <a class="text-black font-bold text-md lg:hidden md:hidden hover:text-indigo-600 " href="https://github.com/VocabCLI/VocabCLI">GitHub</a>
+      </li>
+    </ul>
+  </div>
+
 
     <!-- WINDOW CONTAINER -->
     <div class="py-20 bg-fixed bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 bg-black">
@@ -501,6 +534,10 @@
     <!-- MANUAL ENDS -->
     
     </div>
-
+    <script>
+        document.querySelector('#hamburger-menu-toggle').addEventListener('click', function() {
+          document.querySelector('.mobile-navbar').classList.toggle('hidden');
+        });
+      </script>
 </body>
 </html>
