@@ -11,7 +11,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-fixed w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10">
-  
   <!-- NAVBAR START -->
   <div class="topbar">
     <div class="topbar-container">
@@ -60,8 +59,6 @@
       </li>
     </ul>
   </div>
-
-
   <div class="container mx-auto px-6 bg-fixed">
     <!-- TOP SECTION -->
     <div class="mt-8 mb-12">
@@ -135,29 +132,21 @@
     </div>
     <!-- FEATURES SECTION END -->
   </div>
-
   <!-- Site footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <hr>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
-       <a href="https://github.com/VocabCLI">VocabularyCLI</a>.
-          </p>
+  <footer class="bg-black text-white py-8 site-footer border-t-4 mt-16 border-white">
+    <div class="flex justify-between items-center">
+      <div class="text-md font-medium text-left"> Copyright &copy; 2023 <a href="https://github.com/VocabCLI" class="text-white hover:text-gray-400">VocabularyCLI</a> 
+        <div class="text-md font-medium text-center mt-2">
+          <a href="https://vocabcli.github.io/disclaimer/" class="text-white hover:text-gray-400">DISCLAIMER</a>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <p> Built with <span> &#10084; </span> by Atharva Shah & Anay Deshpande.
-        </div>
-       <a href="https://vocabcli.github.io/disclaimer/">DISCLAIMER</a>
+      </div>
+      <div class="text-md font-medium text-right"> Built with <span class="text-red-600"> &#10084; </span> by <a href="#" class="text-white hover:text-gray-400">Atharva Shah</a> & <a href="#" class="text-white hover:text-gray-400">Anay Deshpande</a>
       </div>
     </div>
+    
   </footer>
-
   <script>
-    document.querySelector('#hamburger-menu-toggle').addEventListener('click', function() {
+    document.querySelector('#hamburger-menu-toggle').addEventListener('click', function () {
       document.querySelector('.mobile-navbar').classList.toggle('hidden');
     });
   </script>

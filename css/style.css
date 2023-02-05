@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
 * {
   margin: 0 auto;
 }
@@ -140,40 +141,50 @@ button {
 /* FEATURE SECTION */
 
 @media only screen and (max-device-width: 480px) {
+
   html,
   body {
     overflow-y: scroll;
   }
+
   .topbar-container {
     width: 80%;
   }
+
   .topbar {
     background: #000;
   }
+
   body {
     animation: 1.5s ease-out 0s 1 FadeIn;
   }
+
   @keyframes FadeIn {
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
   }
+
   .topbar::after {
     content: "";
     display: table;
     clear: both;
   }
+
   .logo {
     width: 60px;
     height: auto;
     left: 70px;
   }
+
   nav {
     float: left;
   }
+
   nav li {
     display: inline-block;
     margin-left: 4px;
@@ -183,10 +194,12 @@ button {
     line-height: 50px;
     right: 2cm;
   }
+
   nav a {
     color: #fff;
     text-decoration: none;
   }
+
   html {
     background-color: black;
     color: white;
@@ -194,6 +207,7 @@ button {
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
   }
+
   .home-info {
     float: right;
     text-align: center;
@@ -201,6 +215,7 @@ button {
     margin-right: 5px;
     margin-top: 50px;
   }
+
   .showcase {
     height: 400px;
     margin-top: 80px;
@@ -215,13 +230,16 @@ button {
   line-height: 24px;
   color: #fbf9f9;
 }
+
 .site-footer hr {
   border-top-color: #bbb;
   opacity: 0.5;
 }
+
 .site-footer hr.small {
   margin: 20px 0;
 }
+
 .site-footer h6 {
   color: #fff;
   font-size: 16px;
@@ -229,36 +247,45 @@ button {
   margin-top: 5px;
   letter-spacing: 2px;
 }
+
 .site-footer a {
   color: #2668f6;
   font-weight: 900;
 }
+
 .site-footer a:hover {
   color: #cc335c;
   text-decoration: none;
 }
+
 .footer-links {
   padding-left: 0;
   list-style: none;
 }
+
 .footer-links li {
   display: block;
 }
+
 .footer-links a {
   color: #737373;
 }
+
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
   color: #3366cc;
   text-decoration: none;
 }
+
 .footer-links.inline li {
   display: inline-block;
 }
+
 .site-footer {
   text-align: left;
 }
+
 .site-footer .social-icons a {
   width: 40px;
   height: 40px;
@@ -268,24 +295,28 @@ button {
   border-radius: 100%;
   background-color: #33353d;
 }
+
 .copyright-text {
   margin: 0;
 }
+
 span {
   content: "\2764";
 }
+
 @media (max-width: 991px) {
   .site-footer [class^="col-"] {
     margin-bottom: 30px;
   }
 }
+
 @media (max-width: 767px) {
   .site-footer {
     padding-bottom: 0;
   }
+
   .site-footer .copyright-text,
   .site-footer {
     text-align: center;
   }
 }
-
