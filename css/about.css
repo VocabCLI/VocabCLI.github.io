@@ -101,17 +101,6 @@ nav a {
     color: #0000ff;
 }
 
-.footer {
-    opacity: 5%;
-    text-align: center;
-    font-size: 0.8vw;
-    margin-top: 25vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 @media only screen and (max-device-width: 480px) {
     html,
     body {
@@ -166,11 +155,5 @@ nav a {
         scroll-behavior: smooth;
         font-family: "PT Sans", sans-serif;
         font-weight: 400;
-    }
-    .footer {
-        opacity: 5%;
-        text-align: center;
-        font-size: 10px;
-        margin-top: 850px;
     }
 }
